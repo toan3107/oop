@@ -4,7 +4,7 @@ public interface Brain {
     // Move is used as a struct to store a single Move
     // ("static" here means it does not have a pointer to an
     // enclosing Brain object, it's just in the Brain namespace.)
-    public static class Move {
+    class Move {
         public int x;
         public int y;
         public Piece piece;
@@ -22,5 +22,5 @@ public interface Brain {
      If the passed in move is non-null, it is used to hold the result
      (just to save the memory allocation).
     */
-    public Brain.Move bestMove(Board board, Piece piece, int limitHeight, Brain.Move move);
+    Brain.Move bestMove(Board board, Piece piece, int limitHeight, Brain.Move move);
 }
